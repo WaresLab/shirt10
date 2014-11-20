@@ -26,6 +26,7 @@ resolved_names <- tnrs_match_names(lab10orders)
 
 # make tree
 response <- tol_induced_subtree(ott_ids=as.numeric(resolved_names$ott_id), parser="phytools")
+#nb if rgl package not installed correctly will not work
 
 # simplify tip labels
 v=strsplit(response$tip.label,split="_",fixed=TRUE)
