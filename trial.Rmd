@@ -1,6 +1,5 @@
 Wares Lab - University of Georgia
 ========================================================
-
 ## Metazoan Diversity
 ## 2005-2015 
 
@@ -17,7 +16,6 @@ library(rotl)
 
 # make string of metazoan taxa lab has worked on - microbes, fungi, plants, parasites excluded
 # biogeography and multi-taxon studies have representative taxa
-
 lab10orders <- c("Thoracica","Decapoda","Isopoda","Cladocera","Neogastropoda","Unionoidea",
                  "Mytiloidea","Ostreoidea","Galliformes","Rodentia","Clupeiformes","Cypriniformes",
                  "Perciformes","Forcipulatida","Scleractinia")
@@ -27,7 +25,7 @@ resolved_names <- tnrs_match_names(lab10orders)
 
 # make tree
 response <- tol_induced_subtree(ott_ids=as.numeric(resolved_names$ott_id), parser="phytools")
-#nb if rgl package not installed correctly will not work, update X11 to XQuartz all good!
+#n.b. if rgl package not installed correctly will not work, update X11 to XQuartz all good!
 
 # simplify tip labels
 v=strsplit(response$tip.label,split="_",fixed=TRUE)
@@ -36,7 +34,6 @@ for(i in 1:length(response$tip.label)){
 }
 
 # plot tree
-
 plot(response)
 ```
 
