@@ -1,7 +1,8 @@
 Wares Lab - University of Georgia
 ========================================================
 
-## 2005-2015 Metazoan Diversity
+## Metazoan Diversity
+## 2005-2015 
 
 ```{r OTOL}
 
@@ -19,13 +20,13 @@ library(rotl)
 
 lab10orders <- c("Thoracica","Decapoda","Isopoda","Cladocera","Neogastropoda","Unionoidea",
                  "Mytiloidea","Ostreoidea","Galliformes","Rodentia","Clupeiformes","Cypriniformes",
+                 "Perciformes","Forcipulatida","Scleractinia")
 
 # match names of string with OTOL names
 resolved_names <- tnrs_match_names(lab10orders)
 
 # make tree
 response <- tol_induced_subtree(ott_ids=as.numeric(resolved_names$ott_id), parser="phytools")
-#nb if rgl package not installed correctly will not work
 #nb if rgl package not installed correctly will not work, update X11 to XQuartz all good!
 
 # simplify tip labels
@@ -36,6 +37,7 @@ for(i in 1:length(response$tip.label)){
 
 # plot tree
 
+plot(response)
 ```
 
 ## @wareslab
